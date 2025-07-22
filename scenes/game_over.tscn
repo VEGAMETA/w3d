@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://06urf5hkgx4e"]
+
+[ext_resource type="Script" uid="uid://bpe2f86nmtghe" path="res://scenes/game_over.gd" id="1_wqhvx"]
+[ext_resource type="Texture2D" uid="uid://camctjwvhi6q7" path="res://assets/gameover.jpg" id="1_xeevv"]
+[ext_resource type="AudioStream" uid="uid://bhtvwpey3f530" path="res://assets/audio/sfx/dead.wav" id="3_tbwuq"]
+[ext_resource type="AudioStream" uid="uid://mw5h7h42sslh" path="res://assets/audio/sfx/game_over.ogg" id="4_racf3"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wqhvx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xeevv")
+metadata/_edit_use_anchors_ = true
+
+[node name="Dead" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_tbwuq")
+pitch_scale = 0.9
+autoplay = true
+
+[node name="GameOver" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_racf3")
+volume_db = -5.0
+
+[connection signal="finished" from="Dead" to="." method="_on_dead_finished"]

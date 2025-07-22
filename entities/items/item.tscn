@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://1ve63isppgh8"]
+
+[ext_resource type="Script" uid="uid://d2vlufksmy4rd" path="res://entities/items/item.gd" id="1_gdl2c"]
+
+[node name="Item" type="Area3D"]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_gdl2c")
+type = 1
+amount = 1
+weapon_resource = ""

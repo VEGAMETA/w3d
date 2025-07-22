@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8l7dqk0q671m"]
+
+[ext_resource type="Script" uid="uid://d2vlufksmy4rd" path="res://entities/items/item.gd" id="1_pt162"]
+
+[node name="Medkit" type="Area3D"]
+collision_mask = 2
+script = ExtResource("1_pt162")
+type = 2
+amount = 35
+weapon_resource = ""
+sprite_image = "uid://bw05nbmy0xkxf"
+metadata/_custom_type_script = "uid://d2vlufksmy4rd"

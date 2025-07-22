@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=2 format=3 uid="uid://c1cgd0vl2dos7"]
+
+[ext_resource type="Script" uid="uid://cybw0lb1axcve" path="res://entities/items/weapon.gd" id="1_uv7pi"]
+
+[resource]
+script = ExtResource("1_uv7pi")
+weapon_name = "revolver"
+ammo = 36
+max_ammo = 36
+magazine_size = 6
+current_magazine = 6
+type = 2
+damage = 55
+attack_time = 0.2
+projectile_speed = 25
+collision_mask = 13
+hud = "uid://b3avl32idr2tk"
+sprite = "uid://m1oomxnge4h4"
+sprite_attack = "uid://cy46s0m8tkc6s"
+sound = "uid://d1tv768pqvi0e"
+empty = "uid://bhflf1d44c3we"
+projectile = "uid://4nryh2m40sff"
+metadata/_custom_type_script = "uid://cybw0lb1axcve"

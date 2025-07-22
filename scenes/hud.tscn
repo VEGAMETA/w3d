@@ -1,0 +1,226 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8r2lq0qa77d6"]
+
+[ext_resource type="Theme" uid="uid://dtjsykgeg2nf6" path="res://static/themes/main_theme.tres" id="1_5ysmq"]
+[ext_resource type="Script" uid="uid://ykjykrf1clhc" path="res://scenes/hud.gd" id="1_oo0fn"]
+[ext_resource type="Texture2D" uid="uid://db8m5nmwyh6uv" path="res://assets/textures/menu2.png" id="3_6fi6k"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_5ysmq"]
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_5ysmq")
+script = ExtResource("1_oo0fn")
+
+[node name="Weapon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.378
+anchor_right = 1.0
+anchor_bottom = 0.823
+offset_top = 0.0559845
+offset_bottom = -0.304016
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Blink" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 547.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Texture" type="TextureRect" parent="."]
+texture_filter = 5
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.823
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.304016
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_6fi6k")
+expand_mode = 3
+
+[node name="Lives" type="Label" parent="." groups=["Lives"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.325
+anchor_top = 0.824
+anchor_right = 0.434
+anchor_bottom = 1.0
+offset_left = -4.40002
+offset_top = 8.04797
+offset_right = -3.96802
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Health" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.563
+anchor_top = 0.824
+anchor_right = 0.687
+anchor_bottom = 1.0
+offset_left = -2.57605
+offset_top = 14.048
+offset_right = -19.4241
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "100"
+horizontal_alignment = 1
+
+[node name="Ammo" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.827
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.99994
+offset_top = 34.104
+offset_right = -13.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "0/0"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="." groups=["Score"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.136
+anchor_top = 0.835
+anchor_right = 0.312
+anchor_bottom = 0.992
+offset_left = -3.67201
+offset_top = 8.91998
+offset_right = -6.42401
+offset_bottom = 8.18396
+theme_override_font_sizes/font_size = 100
+text = "000000"
+horizontal_alignment = 1
+
+[node name="WeaponHud" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.689
+anchor_top = 0.83
+anchor_right = 0.874
+anchor_bottom = 1.0
+offset_left = 45.272
+offset_top = 2.15997
+offset_right = -63.848
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ImageTexture_5ysmq")
+
+[node name="LabelHealth" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.566
+anchor_top = 0.818
+anchor_right = 0.689
+anchor_bottom = 1.0
+offset_left = -0.0320435
+offset_top = -0.0640259
+offset_right = 13.272
+offset_bottom = -49.0
+theme_override_font_sizes/font_size = 50
+text = "health"
+
+[node name="LabelAmmo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.827
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.9999
+offset_top = -11.896
+offset_right = 24.0
+offset_bottom = -55.0
+theme_override_font_sizes/font_size = 50
+text = "ammo"
+
+[node name="LabelLevel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.823
+anchor_right = 0.125
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -10.304
+offset_right = -17.0
+offset_bottom = -56.0
+theme_override_font_sizes/font_size = 50
+text = "level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelScore" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.128
+anchor_top = 0.818
+anchor_right = 0.313
+anchor_bottom = 1.0
+offset_left = 40.544
+offset_top = -8.06403
+offset_right = -42.576
+offset_bottom = -57.0
+theme_override_font_sizes/font_size = 50
+text = "score"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelLives" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.317
+anchor_top = 0.827
+anchor_right = 0.437
+anchor_bottom = 1.0
+offset_left = -4.18399
+offset_top = -3.896
+offset_right = -1.42401
+offset_bottom = -65.0
+theme_override_font_sizes/font_size = 50
+text = "lives"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.824
+anchor_right = 0.117
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 6.04797
+offset_right = -1.78401
+offset_bottom = 13.0
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
