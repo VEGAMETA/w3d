@@ -24,9 +24,9 @@ enum WeaponType {
 @export_flags_3d_physics var collision_mask := 13
 
 @export_category("Bitmaps")
-@export_file var hud := "uid://ccv0jfhbruwbb"
-@export_file var sprite := hud
-@export_file var sprite_attack := hud
+@export_file var hud := Globals.texture_placeholder
+@export_file var sprite := Globals.texture_placeholder
+@export_file var sprite_attack := Globals.texture_placeholder
 
 @export_file var sound := "uid://dbh60kyp43bdu"
 @export_file var empty := "uid://bhflf1d44c3we"

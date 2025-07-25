@@ -1,5 +1,6 @@
 extends Node
 
+var texture_placeholder := "uid://ccv0jfhbruwbb"
 
 var lives : int = 1:
 	set(v):
@@ -64,9 +65,9 @@ func get_item_by_needs() -> Item:
 	for weapon in player.inventory:
 		if weapon.ammo < weapon.max_ammo >> 1:
 			var item_weapon = Item.new()
-			item_weapon.type = Item.ItemType.WEAPON
+			item_weapon.type = Item.ItemType.AMMO
 			item_weapon.amount = randi_range(weapon.magazine_size >> 1, int(weapon.magazine_size * 1.5))
-			item_weapon.sprite_image = weapon.hud
+			item_weapon.sprite_image = "uid://8dslmdntgkuw"
 			item_weapon.weapon_resource = weapon.duplicate()
 			needs.append(item_weapon)
 	if randf() < 0.1:
@@ -80,3 +81,7 @@ func get_item_by_needs() -> Item:
 	if item == null: return null
 	get_tree().current_scene.add_child(item)
 	return item
+
+func notify_item(item:Item) -> void:
+	get_tree().get_first_node_in_group(&"ItemNotifier").add_item(item)
+	

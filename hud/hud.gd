@@ -14,7 +14,6 @@ var blink_tween: Tween
 @onready var weapon_sprite: TextureRect = %Weapon
 @onready var blink_rect: ColorRect = %Blink
 
-
 func blink(col:Color) -> void:
 	blink_rect.color = col
 	blink_tween = create_tween()

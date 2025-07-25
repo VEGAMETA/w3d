@@ -16,7 +16,7 @@ static var ItemColor : Dictionary = {
 @export var type : ItemType = ItemType.NONE
 @export var amount : int = 0
 @export var weapon_resource : Weapon
-@export_file var sprite_image : String = "uid://ccv0jfhbruwbb"
+@export_file var sprite_image : String = Globals.texture_placeholder
 var sprite := Sprite3D.new()
 var collision_shape := CollisionShape3D.new()
 var sphere_shape := SphereShape3D.new()
@@ -41,4 +41,5 @@ func consume(body:Node3D) -> void:
 	if body is not Player: return
 	if body.pick_up(self): 
 		body.picked_up(type)
+		Globals.notify_item(self)
 		queue_free()

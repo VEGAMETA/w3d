@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8r2lq0qa77d6"]
+[gd_scene load_steps=6 format=3 uid="uid://b8r2lq0qa77d6"]
 
 [ext_resource type="Theme" uid="uid://dtjsykgeg2nf6" path="res://static/themes/main_theme.tres" id="1_5ysmq"]
-[ext_resource type="Script" uid="uid://ykjykrf1clhc" path="res://scenes/hud.gd" id="1_oo0fn"]
+[ext_resource type="Script" uid="uid://ykjykrf1clhc" path="res://hud/hud.gd" id="1_oo0fn"]
 [ext_resource type="Texture2D" uid="uid://db8m5nmwyh6uv" path="res://assets/textures/menu2.png" id="3_6fi6k"]
+[ext_resource type="Script" uid="uid://c31a52lfxvoid" path="res://hud/item_notifier.gd" id="4_svhta"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_5ysmq"]
 
@@ -224,3 +225,18 @@ offset_bottom = 13.0
 text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ItemNotifier" type="VFlowContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.031
+anchor_right = 0.343
+anchor_bottom = 0.759
+offset_left = -0.128
+offset_top = -0.0880013
+offset_right = -0.136017
+offset_bottom = -1.83203
+alignment = 2
+script = ExtResource("4_svhta")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://06urf5hkgx4e"]
 
-[ext_resource type="Script" uid="uid://bpe2f86nmtghe" path="res://scenes/game_over.gd" id="1_wqhvx"]
+[ext_resource type="Script" uid="uid://bpe2f86nmtghe" path="res://hud/game_over.gd" id="1_wqhvx"]
 [ext_resource type="Texture2D" uid="uid://camctjwvhi6q7" path="res://assets/gameover.jpg" id="1_xeevv"]
 [ext_resource type="AudioStream" uid="uid://bhtvwpey3f530" path="res://assets/audio/sfx/dead.wav" id="3_tbwuq"]
 [ext_resource type="AudioStream" uid="uid://mw5h7h42sslh" path="res://assets/audio/sfx/game_over.ogg" id="4_racf3"]
